@@ -8,3 +8,4 @@
   Design er frit.
 
   
+https://beasttheninja.github.io/Valutaomregner/
