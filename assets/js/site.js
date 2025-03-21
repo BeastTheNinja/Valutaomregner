@@ -31,6 +31,20 @@ hvis du vil have navnet på din valuta med fra options i dit select tag, så und
     }
 }
 
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navList = document.querySelector(".nav-list");
+
+menuToggle.addEventListener("click", () => {
+    navList.classList.toggle("active");
+});
+
+
+// Ændret, så den bruger `navMenu` i stedet for at oprette en ny variabel
+window.addEventListener("scroll", (e)=>{
+    // console.log(e);
+    navMenu.style.backgroundColor = window.scrollY > 50 ? "#000" : "#777777";
+});
 // ### **1. Funktion: `convertCurrency()`**
 // Denne funktion kaldes, når brugeren trykker på "Omregn"-knappen. Den håndterer følgende opgaver:  
 // - Henter input fra brugeren (beløb og valgte valutaer).  
