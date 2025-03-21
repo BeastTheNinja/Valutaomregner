@@ -8,17 +8,40 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Valutaomregner</title>
     <meta name="description" content="">
     <link rel="shortcut icon" href="#">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/site.css">
     <script src="assets/js/site.js" defer></script>
 </head>
-
 <body>
+    <header>
+        <h1>Omregning af penge til danske kroner</h1>
+    </header>
+    <div class="converter">
+        <h2>Valutaomregner</h2>
+        <label for="amount">Beløb:</label>
+        <input type="number" id="amount" placeholder="Indtast beløb" min="0">
+        
+        <label for="fromCurrency">Fra:</label>
+        <select id="fromCurrency">
+            <option value="DKK">Danske kroner (DKK)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="USD">US Dollar (USD)</option>
+        </select>
 
+        <label for="toCurrency">Til:</label>
+        <select id="toCurrency">
+            <option value="EUR">Euro (EUR)</option>
+            <option value="USD">US Dollar (USD)</option>
+            <option value="DKK">Danske kroner (DKK)</option>
+        </select>
 
+        <button onclick="convertCurrency()">Omregn</button>
+
+        <h3>Resultat: <span id="result">0</span></h3>
+    </div>
 
 </body>
 
